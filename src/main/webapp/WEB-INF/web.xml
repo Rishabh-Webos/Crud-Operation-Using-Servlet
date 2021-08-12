@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+version="4.0">
+  <display-name>studentdetailwebdemo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>insertData</servlet-name>
+  	<servlet-class>com.studentdetail.engine.InsertData</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>insertData</servlet-name>
+  	<url-pattern>/insertData</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>view</servlet-name>
+  	<servlet-class>com.studentdetail.engine.DisplayAllData</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>view</servlet-name>
+  	<url-pattern>/view</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>update</servlet-name>
+  	<servlet-class>com.studentdetail.engine.GetTheDataUsingId</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>update</servlet-name>
+  	<url-pattern>/update</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>updateDatabase</servlet-name>
+  	<servlet-class>com.studentdetail.engine.UpdateDatabase</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>updateDatabase</servlet-name>
+  	<url-pattern>/updateDatabase</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>delete</servlet-name>
+  	<servlet-class>com.studentdetail.engine.DeleteData</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>delete</servlet-name>
+  	<url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+</web-app>
